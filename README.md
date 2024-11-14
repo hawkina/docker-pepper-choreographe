@@ -6,13 +6,19 @@ It has been tested only on Pepper robot. But, it will most probably work on Nao 
 
 It contains Ubuntu 16.04 desktop and a VNC server. You just need to connect to it by using a VNC client.
 
+This is an adapted version. Original Creator + Repository: https://github.com/ocihangir/docker-pepper
+
 # How to run
 
-`docker run -p 5901:5901 ocihangir/docker-pepper`
+1. Clone this repository, install docker and turbivnc
 
-and then connect to:
+2. build the container: `docker build -t pepper-docker docker-pepper-choreographe`
 
-`vnc://<host>:5901` via VNC client.
+3. `docker run -p 5901:5901 pepper-docker`
+
+4. and then connect to turbovnc:
+
+`vncviewer localhost:5901` via VNC client.
 
 The VNC password is `password`.
 
